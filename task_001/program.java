@@ -11,6 +11,8 @@ import java.util.Scanner;
         System.out.print("Input number: ");
         int n = sc.nextInt();
         double T;
+        int sum = 0;
+        int mult = 1;
         int[] array = new int[n];
         int j = 0; 
         for (int i = 1; i <= n; i++){
@@ -22,8 +24,12 @@ import java.util.Scanner;
             System.out.println(s);
         }
         for (int i : array) {
+            sum += i;
+            mult *= i;
             System.out.print(i + " ");
         }
+        System.out.print("\n");
+        System.out.printf("Сумма чисел от 1 до n: %d\nпроизведение чисел от 1 до n: %d", sum, mult);
         sc.close();
     }
 }
